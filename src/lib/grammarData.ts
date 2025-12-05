@@ -545,5 +545,616 @@ export const questions: Question[] = [
     options: ['Subject + Object + Verb', 'Verb + Subject + Object', 'Subject + Verb + Object', 'Object + Verb + Subject'],
     correctAnswer: 'Subject + Verb + Object',
     explanation: 'English uses S + V + O order: I (S) love (V) pizza (O).'
+  },
+  {
+    id: 'q49',
+    ruleId: 'sentence-structure',
+    type: 'error-correction',
+    question: 'Coffee drinks he every morning.',
+    correctAnswer: 'He drinks coffee every morning.',
+    explanation: 'Correct order: Subject (He) + Verb (drinks) + Object (coffee).'
+  },
+  {
+    id: 'q50',
+    ruleId: 'sentence-structure',
+    type: 'multiple-choice',
+    question: 'Which sentence is correct?',
+    options: ['Likes she music.', 'She music likes.', 'She likes music.', 'Music she likes.'],
+    correctAnswer: 'She likes music.',
+    explanation: 'Follow S + V + O structure: She (S) + likes (V) + music (O).'
+  },
+  {
+    id: 'q51',
+    ruleId: 'be-verb',
+    type: 'multiple-choice',
+    question: 'We ___ students.',
+    options: ['am', 'is', 'are', 'be'],
+    correctAnswer: 'are',
+    explanation: 'Use "are" with we/you/they: We are students.'
+  },
+  {
+    id: 'q52',
+    ruleId: 'be-verb',
+    type: 'fill-blank',
+    question: 'It ___ cold outside.',
+    correctAnswer: 'is',
+    explanation: 'Use "is" with it/he/she: It is cold.'
+  },
+  {
+    id: 'q53',
+    ruleId: 'be-verb',
+    type: 'error-correction',
+    question: 'You is my friend.',
+    correctAnswer: 'You are my friend.',
+    explanation: 'Use "are" with you, not "is": You are my friend.'
+  },
+  {
+    id: 'q54',
+    ruleId: 'simple-present',
+    type: 'multiple-choice',
+    question: 'The sun ___ in the east.',
+    options: ['rise', 'rises', 'rising', 'risen'],
+    correctAnswer: 'rises',
+    explanation: 'Facts use simple present. Add -es for he/she/it: The sun rises.'
+  },
+  {
+    id: 'q55',
+    ruleId: 'simple-present',
+    type: 'fill-blank',
+    question: 'We ___ coffee every morning. (drink)',
+    correctAnswer: 'drink',
+    explanation: 'Simple present with we/you/they uses base form: We drink.'
+  },
+  {
+    id: 'q56',
+    ruleId: 'simple-present',
+    type: 'error-correction',
+    question: 'He live in New York.',
+    correctAnswer: 'He lives in New York.',
+    explanation: 'Add -s to verbs with he/she/it: live → lives.'
+  },
+  {
+    id: 'q57',
+    ruleId: 'simple-present',
+    type: 'multiple-choice',
+    question: 'They ___ football on weekends.',
+    options: ['plays', 'play', 'playing', 'played'],
+    correctAnswer: 'play',
+    explanation: 'Use base form with they/we/you: They play football.'
+  },
+  {
+    id: 'q58',
+    ruleId: 'present-continuous',
+    type: 'multiple-choice',
+    question: 'We ___ to the park now.',
+    options: ['go', 'goes', 'are going', 'went'],
+    correctAnswer: 'are going',
+    explanation: 'Present continuous for actions now: are/is/am + verb-ing.'
+  },
+  {
+    id: 'q59',
+    ruleId: 'present-continuous',
+    type: 'fill-blank',
+    question: 'He ___ his homework right now. (do)',
+    correctAnswer: 'is doing',
+    explanation: 'Present continuous: is/am/are + verb-ing. He is doing.'
+  },
+  {
+    id: 'q60',
+    ruleId: 'present-continuous',
+    type: 'error-correction',
+    question: 'I studying English.',
+    correctAnswer: 'I am studying English.',
+    explanation: 'Need am/is/are before verb-ing: I am studying.'
+  },
+  {
+    id: 'q61',
+    ruleId: 'simple-past',
+    type: 'multiple-choice',
+    question: 'I ___ my keys yesterday.',
+    options: ['lose', 'loses', 'losed', 'lost'],
+    correctAnswer: 'lost',
+    explanation: '"Lose" is irregular. Past form is "lost".'
+  },
+  {
+    id: 'q62',
+    ruleId: 'simple-past',
+    type: 'fill-blank',
+    question: 'They ___ to the beach last summer. (go)',
+    correctAnswer: 'went',
+    explanation: 'Irregular verb: go → went (not goed).'
+  },
+  {
+    id: 'q63',
+    ruleId: 'simple-past',
+    type: 'multiple-choice',
+    question: 'She ___ a letter last night.',
+    options: ['write', 'writes', 'wrote', 'written'],
+    correctAnswer: 'wrote',
+    explanation: 'Irregular verb: write → wrote in simple past.'
+  },
+  {
+    id: 'q64',
+    ruleId: 'simple-past',
+    type: 'error-correction',
+    question: 'We buyed a new car.',
+    correctAnswer: 'We bought a new car.',
+    explanation: 'Irregular verb: buy → bought (not buyed).'
+  },
+  {
+    id: 'q65',
+    ruleId: 'future',
+    type: 'multiple-choice',
+    question: 'They ___ arrive at 5 PM.',
+    options: ['will', 'going', 'going to', 'wills'],
+    correctAnswer: 'will',
+    explanation: 'Use "will" for future predictions: They will arrive.'
+  },
+  {
+    id: 'q66',
+    ruleId: 'future',
+    type: 'fill-blank',
+    question: 'I ___ buy a new phone next week. (planning to)',
+    correctAnswer: 'am going to',
+    explanation: 'Use "going to" for planned future actions: I am going to buy.'
+  },
+  {
+    id: 'q67',
+    ruleId: 'future',
+    type: 'error-correction',
+    question: 'She will goes to the party.',
+    correctAnswer: 'She will go to the party.',
+    explanation: 'After "will", use base verb form (not goes): will go.'
+  },
+  {
+    id: 'q68',
+    ruleId: 'modal-verbs',
+    type: 'multiple-choice',
+    question: '___ I use your phone?',
+    options: ['Can', 'Must', 'Should', 'Will'],
+    correctAnswer: 'Can',
+    explanation: 'Use "can" or "may" to ask for permission: Can I use your phone?'
+  },
+  {
+    id: 'q69',
+    ruleId: 'modal-verbs',
+    type: 'fill-blank',
+    question: 'You ___ see a doctor. (advice)',
+    correctAnswer: 'should',
+    explanation: 'Use "should" for advice: You should see a doctor.'
+  },
+  {
+    id: 'q70',
+    ruleId: 'modal-verbs',
+    type: 'multiple-choice',
+    question: 'Students ___ wear uniforms at this school.',
+    options: ['can', 'must', 'could', 'may'],
+    correctAnswer: 'must',
+    explanation: 'Use "must" for rules and strong obligation.'
+  },
+  {
+    id: 'q71',
+    ruleId: 'modal-verbs',
+    type: 'error-correction',
+    question: 'He can speaks three languages.',
+    correctAnswer: 'He can speak three languages.',
+    explanation: 'After modals (can, must, should), use base verb: can speak.'
+  },
+  {
+    id: 'q72',
+    ruleId: 'questions',
+    type: 'multiple-choice',
+    question: '___ time is it?',
+    options: ['How', 'What', 'When', 'Where'],
+    correctAnswer: 'What',
+    explanation: 'Use "What time" to ask about time: What time is it?'
+  },
+  {
+    id: 'q73',
+    ruleId: 'questions',
+    type: 'fill-blank',
+    question: '___ is your name?',
+    correctAnswer: 'What',
+    explanation: 'Use "What" to ask about things or information: What is your name?'
+  },
+  {
+    id: 'q74',
+    ruleId: 'questions',
+    type: 'multiple-choice',
+    question: '___ do you go to school?',
+    options: ['What', 'Why', 'How', 'Who'],
+    correctAnswer: 'How',
+    explanation: 'Use "How" to ask about method or manner: How do you go?'
+  },
+  {
+    id: 'q75',
+    ruleId: 'questions',
+    type: 'error-correction',
+    question: 'Why you are late?',
+    correctAnswer: 'Why are you late?',
+    explanation: 'Question order: WH-word + be verb + subject: Why are you late?'
+  },
+  {
+    id: 'q76',
+    ruleId: 'articles',
+    type: 'multiple-choice',
+    question: 'She bought ___ umbrella.',
+    options: ['a', 'an', 'the', 'no article'],
+    correctAnswer: 'an',
+    explanation: 'Use "an" before words starting with vowel sounds: an umbrella.'
+  },
+  {
+    id: 'q77',
+    ruleId: 'articles',
+    type: 'fill-blank',
+    question: 'I want to visit ___ Eiffel Tower.',
+    correctAnswer: 'the',
+    explanation: 'Use "the" with famous landmarks and unique things: the Eiffel Tower.'
+  },
+  {
+    id: 'q78',
+    ruleId: 'articles',
+    type: 'error-correction',
+    question: 'I have a apple.',
+    correctAnswer: 'I have an apple.',
+    explanation: 'Use "an" before vowel sounds: an apple, an orange.'
+  },
+  {
+    id: 'q79',
+    ruleId: 'articles',
+    type: 'multiple-choice',
+    question: 'She is ___ best student in class.',
+    options: ['a', 'an', 'the', 'no article'],
+    correctAnswer: 'the',
+    explanation: 'Use "the" with superlatives: the best, the fastest.'
+  },
+  {
+    id: 'q80',
+    ruleId: 'prepositions',
+    type: 'multiple-choice',
+    question: 'I was born ___ 1990.',
+    options: ['in', 'on', 'at', 'for'],
+    correctAnswer: 'in',
+    explanation: 'Use "in" with years: in 1990, in 2025.'
+  },
+  {
+    id: 'q81',
+    ruleId: 'prepositions',
+    type: 'fill-blank',
+    question: 'The book is ___ the table.',
+    correctAnswer: 'on',
+    explanation: 'Use "on" for surfaces: on the table, on the floor.'
+  },
+  {
+    id: 'q82',
+    ruleId: 'prepositions',
+    type: 'multiple-choice',
+    question: 'She waited ___ the bus stop.',
+    options: ['in', 'on', 'at', 'to'],
+    correctAnswer: 'at',
+    explanation: 'Use "at" for specific locations: at the bus stop, at home.'
+  },
+  {
+    id: 'q83',
+    ruleId: 'prepositions',
+    type: 'error-correction',
+    question: 'I live at New York.',
+    correctAnswer: 'I live in New York.',
+    explanation: 'Use "in" with cities and countries: in New York, in Japan.'
+  },
+  {
+    id: 'q84',
+    ruleId: 'countable-uncountable',
+    type: 'multiple-choice',
+    question: 'There are ___ people here.',
+    options: ['many', 'much', 'a', 'little'],
+    correctAnswer: 'many',
+    explanation: 'People are countable. Use "many": many people, many students.'
+  },
+  {
+    id: 'q85',
+    ruleId: 'countable-uncountable',
+    type: 'fill-blank',
+    question: 'I need ___ information. (some)',
+    correctAnswer: 'some',
+    explanation: 'Information is uncountable. Use "some" or "much": some information.'
+  },
+  {
+    id: 'q86',
+    ruleId: 'countable-uncountable',
+    type: 'multiple-choice',
+    question: 'How ___ sugar do you need?',
+    options: ['many', 'much', 'few', 'a'],
+    correctAnswer: 'much',
+    explanation: 'Sugar is uncountable. Use "much" in questions: How much sugar?'
+  },
+  {
+    id: 'q87',
+    ruleId: 'countable-uncountable',
+    type: 'error-correction',
+    question: 'I have many homework.',
+    correctAnswer: 'I have much homework.',
+    explanation: 'Homework is uncountable. Use "much" or "a lot of": much homework.'
+  },
+  {
+    id: 'q88',
+    ruleId: 'comparatives',
+    type: 'multiple-choice',
+    question: 'Today is ___ than yesterday.',
+    options: ['hot', 'hotter', 'hottest', 'more hot'],
+    correctAnswer: 'hotter',
+    explanation: 'Short adjective comparative: hot → hotter (double the consonant).'
+  },
+  {
+    id: 'q89',
+    ruleId: 'comparatives',
+    type: 'fill-blank',
+    question: 'This is ___ expensive restaurant in town. (most)',
+    correctAnswer: 'the most',
+    explanation: 'Long adjective superlative: the most expensive.'
+  },
+  {
+    id: 'q90',
+    ruleId: 'comparatives',
+    type: 'multiple-choice',
+    question: 'She is ___ than her brother.',
+    options: ['tall', 'taller', 'tallest', 'more tall'],
+    correctAnswer: 'taller',
+    explanation: 'Short adjective comparative: tall → taller.'
+  },
+  {
+    id: 'q91',
+    ruleId: 'comparatives',
+    type: 'error-correction',
+    question: 'He is more fast than me.',
+    correctAnswer: 'He is faster than me.',
+    explanation: 'Short adjectives use -er, not "more": fast → faster.'
+  },
+  {
+    id: 'q92',
+    ruleId: 'expressions',
+    type: 'multiple-choice',
+    question: 'I ___ to visit Japan someday.',
+    options: ['want', 'wants', 'wanting', 'wanted'],
+    correctAnswer: 'want',
+    explanation: 'Pattern: want to + verb. I want to visit.'
+  },
+  {
+    id: 'q93',
+    ruleId: 'expressions',
+    type: 'fill-blank',
+    question: 'She ___ to wake up early tomorrow. (necessity)',
+    correctAnswer: 'has',
+    explanation: 'Have to expresses necessity: She has to wake up early.'
+  },
+  {
+    id: 'q94',
+    ruleId: 'expressions',
+    type: 'multiple-choice',
+    question: 'I ___ like some tea, please.',
+    options: ['want', 'would', 'will', 'should'],
+    correctAnswer: 'would',
+    explanation: 'Polite request: would like. I would like some tea.'
+  },
+  {
+    id: 'q95',
+    ruleId: 'expressions',
+    type: 'error-correction',
+    question: 'I need go now.',
+    correctAnswer: 'I need to go now.',
+    explanation: 'Pattern: need to + verb. I need to go.'
+  },
+  {
+    id: 'q96',
+    ruleId: 'sentence-structure',
+    type: 'fill-blank',
+    question: 'Rearrange: book / reads / she / a → ___ ___ ___ ___',
+    correctAnswer: 'She reads a book.',
+    explanation: 'S + V + O structure: She reads a book.'
+  },
+  {
+    id: 'q97',
+    ruleId: 'be-verb',
+    type: 'multiple-choice',
+    question: 'You ___ very kind.',
+    options: ['am', 'is', 'are', 'be'],
+    correctAnswer: 'are',
+    explanation: 'Use "are" with you: You are kind.'
+  },
+  {
+    id: 'q98',
+    ruleId: 'simple-present',
+    type: 'fill-blank',
+    question: 'My sister ___ in a hospital. (work)',
+    correctAnswer: 'works',
+    explanation: 'Add -s with he/she/it: My sister works.'
+  },
+  {
+    id: 'q99',
+    ruleId: 'present-continuous',
+    type: 'multiple-choice',
+    question: 'Listen! Someone ___ at the door.',
+    options: ['knock', 'knocks', 'is knocking', 'knocked'],
+    correctAnswer: 'is knocking',
+    explanation: 'Use present continuous for actions happening now: is knocking.'
+  },
+  {
+    id: 'q100',
+    ruleId: 'simple-past',
+    type: 'fill-blank',
+    question: 'I ___ you at the party last night. (see)',
+    correctAnswer: 'saw',
+    explanation: 'Irregular verb: see → saw in simple past.'
+  },
+  {
+    id: 'q101',
+    ruleId: 'future',
+    type: 'multiple-choice',
+    question: 'Look at those clouds! It ___ rain.',
+    options: ['will', 'is going to', 'going to', 'will be'],
+    correctAnswer: 'is going to',
+    explanation: 'Use "going to" for predictions based on evidence: It is going to rain.'
+  },
+  {
+    id: 'q102',
+    ruleId: 'modal-verbs',
+    type: 'fill-blank',
+    question: '___ I borrow your pen? (polite request)',
+    correctAnswer: 'Could',
+    explanation: 'Use "could" or "may" for polite requests: Could I borrow?'
+  },
+  {
+    id: 'q103',
+    ruleId: 'questions',
+    type: 'multiple-choice',
+    question: '___ is calling you?',
+    options: ['What', 'Where', 'Who', 'How'],
+    correctAnswer: 'Who',
+    explanation: 'Use "Who" to ask about people: Who is calling?'
+  },
+  {
+    id: 'q104',
+    ruleId: 'articles',
+    type: 'multiple-choice',
+    question: 'He is ___ honest man.',
+    options: ['a', 'an', 'the', 'no article'],
+    correctAnswer: 'an',
+    explanation: 'Use "an" before "honest" because "h" is silent (vowel sound).'
+  },
+  {
+    id: 'q105',
+    ruleId: 'prepositions',
+    type: 'fill-blank',
+    question: 'I have been waiting ___ two hours.',
+    correctAnswer: 'for',
+    explanation: 'Use "for" with duration: for two hours, for three days.'
+  },
+  {
+    id: 'q106',
+    ruleId: 'countable-uncountable',
+    type: 'multiple-choice',
+    question: 'Can I have ___ milk?',
+    options: ['many', 'much', 'some', 'few'],
+    correctAnswer: 'some',
+    explanation: 'Milk is uncountable. Use "some" in offers and requests: some milk.'
+  },
+  {
+    id: 'q107',
+    ruleId: 'comparatives',
+    type: 'fill-blank',
+    question: 'This exercise is ___ difficult than the last one. (more)',
+    correctAnswer: 'more',
+    explanation: 'Long adjectives use "more" for comparatives: more difficult.'
+  },
+  {
+    id: 'q108',
+    ruleId: 'expressions',
+    type: 'multiple-choice',
+    question: 'Do you ___ to come with us?',
+    options: ['want', 'wants', 'wanting', 'wanted'],
+    correctAnswer: 'want',
+    explanation: 'After "do/does", use base form: Do you want to come?'
+  },
+  {
+    id: 'q109',
+    ruleId: 'simple-present',
+    type: 'multiple-choice',
+    question: 'The train ___ at 6 AM.',
+    options: ['leave', 'leaves', 'leaving', 'left'],
+    correctAnswer: 'leaves',
+    explanation: 'Schedules use simple present with -s for he/she/it: The train leaves.'
+  },
+  {
+    id: 'q110',
+    ruleId: 'simple-past',
+    type: 'multiple-choice',
+    question: 'We ___ a great time yesterday.',
+    options: ['have', 'has', 'had', 'having'],
+    correctAnswer: 'had',
+    explanation: 'Irregular verb: have → had in simple past.'
+  },
+  {
+    id: 'q111',
+    ruleId: 'modal-verbs',
+    type: 'multiple-choice',
+    question: 'You ___ drive without a license.',
+    options: ["can't", 'must', 'should', 'may'],
+    correctAnswer: "can't",
+    explanation: "Use \"can't\" or \"mustn't\" for prohibition: You can't drive without a license."
+  },
+  {
+    id: 'q112',
+    ruleId: 'questions',
+    type: 'fill-blank',
+    question: '___ old are you?',
+    correctAnswer: 'How',
+    explanation: 'Use "How old" to ask about age: How old are you?'
+  },
+  {
+    id: 'q113',
+    ruleId: 'prepositions',
+    type: 'multiple-choice',
+    question: 'The cat is hiding ___ the bed.',
+    options: ['in', 'on', 'under', 'at'],
+    correctAnswer: 'under',
+    explanation: 'Use "under" for something below: under the bed, under the table.'
+  },
+  {
+    id: 'q114',
+    ruleId: 'comparatives',
+    type: 'multiple-choice',
+    question: 'This is ___ car in the showroom.',
+    options: ['expensive', 'expensiver', 'the most expensive', 'more expensive'],
+    correctAnswer: 'the most expensive',
+    explanation: 'Superlative for long adjectives: the most expensive.'
+  },
+  {
+    id: 'q115',
+    ruleId: 'be-verb',
+    type: 'error-correction',
+    question: 'They is happy.',
+    correctAnswer: 'They are happy.',
+    explanation: 'Use "are" with they, not "is": They are happy.'
+  },
+  {
+    id: 'q116',
+    ruleId: 'present-continuous',
+    type: 'fill-blank',
+    question: 'What ___ you doing? (are/is)',
+    correctAnswer: 'are',
+    explanation: 'Use "are" with you: What are you doing?'
+  },
+  {
+    id: 'q117',
+    ruleId: 'articles',
+    type: 'error-correction',
+    question: 'She wants to be doctor.',
+    correctAnswer: 'She wants to be a doctor.',
+    explanation: 'Need "a" before singular countable nouns: a doctor, a teacher.'
+  },
+  {
+    id: 'q118',
+    ruleId: 'countable-uncountable',
+    type: 'multiple-choice',
+    question: 'How ___ apples do you want?',
+    options: ['many', 'much', 'little', 'a'],
+    correctAnswer: 'many',
+    explanation: 'Apples are countable. Use "many" in questions: How many apples?'
+  },
+  {
+    id: 'q119',
+    ruleId: 'future',
+    type: 'error-correction',
+    question: 'I going to study tomorrow.',
+    correctAnswer: 'I am going to study tomorrow.',
+    explanation: 'Need am/is/are before "going to": I am going to study.'
+  },
+  {
+    id: 'q120',
+    ruleId: 'expressions',
+    type: 'fill-blank',
+    question: 'I ___ like to order pizza. (polite)',
+    correctAnswer: 'would',
+    explanation: 'Polite expression: would like to. I would like to order.'
   }
 ]
