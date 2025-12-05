@@ -1162,4 +1162,3 @@ export const questions: Question[] = [
 
 function generateAdditionalQuestions(): Question[] {
   return []
-}
