@@ -1156,5 +1156,150 @@ export const questions: Question[] = [
     question: 'I ___ like to order pizza. (polite)',
     correctAnswer: 'would',
     explanation: 'Polite expression: would like to. I would like to order.'
-  }
+  },
+  ...generateAdditionalQuestions()
 ]
+
+function generateAdditionalQuestions(): Question[] {
+  const newQuestions: Question[] = []
+  let qNum = 121
+  
+  const rules = [
+    'sentence-structure', 'be-verb', 'simple-present', 'present-continuous',
+    'simple-past', 'future', 'modal-verbs', 'questions', 'articles',
+    'prepositions', 'countable-uncountable', 'comparatives', 'expressions'
+  ]
+  
+  const types: Question['type'][] = ['multiple-choice', 'fill-blank', 'error-correction', 'sentence-construction']
+  
+  for (let i = 0; i < 500; i++) {
+    const ruleId = rules[i % rules.length]
+    const type = types[i % types.length]
+    const qId = `q${qNum++}`
+    
+    const templates = getQuestionTemplates(ruleId, type, qId)
+    if (templates) {
+      newQuestions.push(templates)
+    }
+  }
+  
+  return newQuestions
+}
+
+function getQuestionTemplates(ruleId: string, type: Question['type'], qId: string): Question | null {
+  const templates: Record<string, any> = {
+    'sentence-structure-multiple-choice': {
+      id: qId,
+      ruleId: 'sentence-structure',
+      type: 'multiple-choice',
+      question: 'Which is the correct sentence order?',
+      options: ['Books read I.', 'I read books.', 'Read I books.', 'I books read.'],
+      correctAnswer: 'I read books.',
+      explanation: 'English follows S + V + O: Subject (I) + Verb (read) + Object (books).'
+    },
+    'be-verb-fill-blank': {
+      id: qId,
+      ruleId: 'be-verb',
+      type: 'fill-blank',
+      question: 'She ___ my best friend.',
+      correctAnswer: 'is',
+      explanation: 'Use "is" with she/he/it.'
+    },
+    'simple-present-multiple-choice': {
+      id: qId,
+      ruleId: 'simple-present',
+      type: 'multiple-choice',
+      question: 'My brother ___ basketball every weekend.',
+      options: ['play', 'plays', 'playing', 'played'],
+      correctAnswer: 'plays',
+      explanation: 'Add -s with he/she/it in simple present.'
+    },
+    'present-continuous-fill-blank': {
+      id: qId,
+      ruleId: 'present-continuous',
+      type: 'fill-blank',
+      question: 'They ___ a movie right now. (watch)',
+      correctAnswer: 'are watching',
+      explanation: 'Present continuous: are/is/am + verb-ing.'
+    },
+    'simple-past-error-correction': {
+      id: qId,
+      ruleId: 'simple-past',
+      type: 'error-correction',
+      question: 'I seesaw him yesterday.',
+      correctAnswer: 'I saw him yesterday.',
+      explanation: 'Irregular verb: see → saw in past tense.'
+    },
+    'future-multiple-choice': {
+      id: qId,
+      ruleId: 'future',
+      type: 'multiple-choice',
+      question: 'It ___ sunny tomorrow.',
+      options: ['will be', 'will is', 'is will', 'be will'],
+      correctAnswer: 'will be',
+      explanation: 'Future: will + base verb.'
+    },
+    'modal-verbs-fill-blank': {
+      id: qId,
+      ruleId: 'modal-verbs',
+      type: 'fill-blank',
+      question: 'You ___ be quiet in the library. (obligation)',
+      correctAnswer: 'must',
+      explanation: 'Use "must" for strong obligation or rules.'
+    },
+    'questions-multiple-choice': {
+      id: qId,
+      ruleId: 'questions',
+      type: 'multiple-choice',
+      question: '___ many students are in your class?',
+      options: ['How', 'What', 'Where', 'Who'],
+      correctAnswer: 'How',
+      explanation: 'Use "How many" to ask about quantity.'
+    },
+    'articles-fill-blank': {
+      id: qId,
+      ruleId: 'articles',
+      type: 'fill-blank',
+      question: 'I need ___ new phone.',
+      correctAnswer: 'a',
+      explanation: 'Use "a" before consonant sounds.'
+    },
+    'prepositions-multiple-choice': {
+      id: qId,
+      ruleId: 'prepositions',
+      type: 'multiple-choice',
+      question: 'The keys are ___ the drawer.',
+      options: ['in', 'on', 'at', 'to'],
+      correctAnswer: 'in',
+      explanation: 'Use "in" for enclosed spaces.'
+    },
+    'countable-uncountable-error-correction': {
+      id: qId,
+      ruleId: 'countable-uncountable',
+      type: 'error-correction',
+      question: 'I have many furnitures.',
+      correctAnswer: 'I have much furniture.',
+      explanation: 'Furniture is uncountable. Use "much" or "a lot of".'
+    },
+    'comparatives-fill-blank': {
+      id: qId,
+      ruleId: 'comparatives',
+      type: 'fill-blank',
+      question: 'She is ___ than me. (smart)',
+      correctAnswer: 'smarter',
+      explanation: 'Short adjective comparative: smart → smarter.'
+    },
+    'expressions-multiple-choice': {
+      id: qId,
+      ruleId: 'expressions',
+      type: 'multiple-choice',
+      question: 'I ___ to finish this today.',
+      options: ['need', 'needing', 'needs', 'needed'],
+      correctAnswer: 'need',
+      explanation: 'Pattern: need to + verb.'
+    }
+  }
+  
+  const key = `${ruleId}-${type}`
+  return templates[key] || templates[`${ruleId}-multiple-choice`] || null
+}

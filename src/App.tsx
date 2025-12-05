@@ -24,9 +24,10 @@ import {
 } from '@phosphor-icons/react'
 import { grammarRules, questions, type Question, type UserProgress } from '@/lib/grammarData'
 import { cn } from '@/lib/utils'
+import { QuestionGenerator } from '@/components/QuestionGenerator'
 
 function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'practice' | 'study' | 'progress'>('home')
+  const [currentView, setCurrentView] = useState<'home' | 'practice' | 'study' | 'progress' | 'generator'>('home')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState('')
@@ -193,6 +194,13 @@ function App() {
             >
               <Trophy size={18} weight="fill" />
               <span className="hidden sm:inline">Progress</span>
+            </Button>
+            <Button
+              variant={currentView === 'generator' ? 'default' : 'ghost'}
+              onClick={() => setCurrentView('generator')}
+              className="gap-2"
+            >
+              <span className="hidden sm:inline">Generator</span>
             </Button>
           </div>
         </div>
@@ -647,6 +655,10 @@ function App() {
               </Card>
             )}
           </div>
+        )}
+
+        {currentView === 'generator' && (
+          <QuestionGenerator />
         )}
       </main>
     </div>
